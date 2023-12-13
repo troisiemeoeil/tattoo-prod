@@ -4,20 +4,38 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script src="https://unpkg.com/react@16.13.1/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom-server.browser.production.min.js"></script>
+    <script src="https://unpkg.com/styled-components@4.4.1/dist/styled-components.min.js"></script>
+    <script src="https://cdn.img.ly/packages/imgly/photoeditorsdk/latest/umd/no-polyfills.js"></script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      html {
+        overscroll-behavior-x: contain;
+      }
+    </style>
 
     <title>Vite App</title>
-    <script type="module" crossorigin src="/assets/index-8A065gQx.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-ZBQLANcm.css">
+    <script type="module" crossorigin src="/assets/index-9MU38xs3.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-MMvxgDYS.css">
   </head>
   <body>
     <div class="container">
-      <canvas id="renderCanvas"></canvas>
       <div class="sidebar">
         <button class="startAnimationBtn">Run Animation</button>
         <button class="stopAnimationBtn">Stop Animation</button>
+        <button class="exportBtn">export</button>
+
         <img src="" width="250px" alt="" srcset="">
         <input type="file" id="images" accept="image/*" required>
+        <p>   hello   </p>
+      
+      </input>
+   
         <div>
           <p>Scale</p>
           <div class="range-input">
@@ -30,6 +48,7 @@
         <div>
           <p>Angle</p>
           <div class="range-inputAngle">
+      
             <input type="range" id="angle"  min="0" max="72" value="0" step="0.03">
             <div class="valueAngle">
               <div ></div>
@@ -40,6 +59,11 @@
        
       </div>
     </div>
+      <canvas id="renderCanvas"></canvas>
+       <div id="cesdk_container" class="editor_container" ></div>
+
+      </div>
+
 
 
 
