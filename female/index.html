@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://unpkg.com/react@16.13.1/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom-server.browser.production.min.js"></script>
+    <script src="https://unpkg.com/styled-components@4.4.1/dist/styled-components.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      html {
+        overscroll-behavior-x: contain;
+      }
+    .ubq-public {
+      --ubq-canvas: hsl(210,9.09%,8.63%);
+      --ubq-elevation-1: hsl(210,8.57%,13.73%);
+      --ubq-elevation-2: hsl(206.67,9.47%,18.63%);
+      --ubq-elevation-3: hsl(210,9.59%,28.63%);
+      --ubq-foreground-default: hsla(0,0%,100%,0.9);
+      --ubq-foreground-light: hsla(0,0%,100%,0.7);
+      --ubq-foreground-info: hsla(0,0%,100%,0.5);
+      --ubq-foreground-active: hsla(0,0%,100%,0.9);
+      --ubq-foreground-accent: hsl(0,0%,100%);
+      --ubq-foreground-danger: hsla(210, 0%, 100%, 1);
+      --ubq-interactive-default: hsl(212.73,9.09%,23.73%);
+      --ubq-interactive-hover: hsl(206.67,9.47%,18.63%);
+      --ubq-interactive-pressed: hsl(216,8.77%,11.18%);
+      --ubq-interactive-selected: hsl(210,9.26%,21.18%);
+      --ubq-interactive-active-default: hsl(219.64,23.53%,46.67%);
+      --ubq-interactive-active-hover: hsl(220.34,23.58%,51.76%);
+      --ubq-interactive-active-pressed: hsl(219.6,23.58%,41.57%);
+      --ubq-interactive-accent-default: hsl(248.67,51.14%,65.49%);
+      --ubq-interactive-accent-hover: hsl(248.57,50.99%,70.39%);
+      --ubq-interactive-accent-pressed: hsl(248.74,51.24%,60.59%);
+      --ubq-interactive-danger-default: linear-gradient( 180deg, hsla(0, 0%, 100%, 0.07), hsla(0, 0%, 100%, 0) ), hsla(338, 64%, 62%, 0.85);
+      --ubq-interactive-danger-hover: linear-gradient( 180deg, hsla(0, 0%, 100%, 0.07), hsla(0, 0%, 100%, 0) ), hsla(338, 64%, 62%, 0.65);
+      --ubq-interactive-danger-pressed: hsla(338, 64%, 62%, 0.65);
+      --ubq-interactive-template-default: linear-gradient( 180deg, hsla(0, 0%, 100%, 0.06), hsla(0, 0%, 100%, 0) ), hsla(274, 97%, 60%, 0.6);
+      --ubq-interactive-template-hover: linear-gradient( 180deg, hsla(0, 0%, 100%, 0.06), hsla(0, 0%, 100%, 0) ), hsla(274, 97%, 60%, 0.5);
+      --ubq-interactive-template-pressed: hsla(274, 97%, 60%, 0.5);
+      --ubq-input-default: hsl(0,0%,0%);
+      --ubq-input-hover: hsl(0,0%,0%);
+      --ubq-interactive-group-default: hsla(0, 0%, 100%, 0);
+      --ubq-interactive-group-hover: hsla(0, 0%, 100%, 0.04);
+      --ubq-interactive-group-active-default: hsla(0, 0%, 100%, 0.08);
+      --ubq-interactive-group-active-hover: hsla(0, 0%, 100%, 0.12);
+      --ubq-border-default: hsla(208.42,9%,58.63%,0.1);
+      --ubq-stroke-contrast-1: hsla(0,0%,100%,0.15);
+      --ubq-stroke-contrast-2: hsla(0,0%,100%,0.3);
+      --ubq-focus-default: hsl(241.99,48.47%,63.74%);
+      --ubq-focus-outline: hsl(210,9.09%,8.63%);
+      --ubq-overlay: hsla(210, 30%, 10%, 0.8);
+      --ubq-notice-info: hsl(0,0%,0%);
+      --ubq-notice-success: hsl(163.16,100%,30.58%);
+      --ubq-notice-warning: hsl(37.68,61.49%,42.35%);
+      --ubq-notice-error: hsl(337.49,58.82%,59.95%);
+      --ubq-effect-shadow: 0px 1px 2px 0px hsla(0, 0%, 0%, 0.16), 0px 0px 0px 0.5px hsla(0, 0%, 0%, 0.08);
+      --ubq-effect-focus: 0px 1px 2px 0px hsla(0, 0%, 0%, 0.16), 0px 0px 0px 0.5px hsla(0, 0%, 0%, 0.08), 0px 0px 0px 2px hsl(210, 30%, 10%), 0px 0px 0px 4px hsl(230, 90%, 80%);
+      --ubq-progress: hsla(0,0%,100%,0.7);
+      --ubq-static-selection-frame: hsl(230, 100%, 60%);
+      --ubq-static-contrast-white: hsl(0, 0%, 100%);
+      --ubq-static-contrast-black: hsl(0, 0%, 0%);
+      --ubq-static-snapping: hsl(338, 100%, 50%);
+      --ubq-static-bleed: hsl(334, 73%, 43%);
+      --ubq-static-text-variable: hsl(274, 97%, 60%);
+      --ubq-static-card-label-background: linear-gradient( 180deg, rgba(0, 0, 0, 0) 14.46%, rgba(0, 0, 0, 0.6) 100% );
+      --ubq-static-card-background: linear-gradient( 180deg, hsla(0, 0%, 100%, 0.08), hsla(0, 0%, 0%, 0.08) ), hsla(0, 0%, 67%, 0.16);
+    }
+  
+    </style>
+
+    <title>TattMaker</title>
+    <script type="module" crossorigin src="/assets/nested-GiXq_1a2.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/index-xmR1dvwd.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-IUXBdWI9.css">
+    <link rel="stylesheet" crossorigin href="/assets/nested-IlKHJkFr.css">
+  </head>
+  <body>
+    
+    <div class="container">
+      <div id="cesdk_container" class="editor_container"></div>
+
+      <canvas id="renderCanvas"></canvas>
+      <div class="sidebar">
+        <h2 style="color: white;">Switch Models:</h2>
+        <div class="modelsthumb">
+          <div class="malethumb">
+            <a href="/">
+              <button class="maleModelBtn" >
+                <img src="/assets/maleThumb-removebg-preview-R_3c5llV.png" width="350px" alt="" srcset="">
+              </button>
+            </a>
+          </div>
+          <div class="femalethumb">
+          <button class="femaleModelBtn">
+            <img src="/assets/femaleThumb-removebg-preview-OJaKsNj2.png" width="350px" alt="" srcset="">
+          </button>
+        </div>
+        </div>
+        <button class="switchModel"><a href="/female/index.html">Female Model</a></button>
+        <button class="startAnimationBtn">Run Animation</button>
+        <button class="stopAnimationBtn">Stop Animation</button>
+        <img src="/" width="350px" alt="" srcset="">
+        <input type="file" id="images" accept="image/*" required>
+      
+      
+      </input>
+   
+        <div>
+          <p>Scale</p>
+          <div class="range-input">
+          <input type="range" id="width"  min="0" max="1" value="0.03" step="0.015">
+          <div class="value">
+            <div></div>
+          </div>
+        </div>
+        </div>
+        <div>
+          <p>Angle</p>
+          <div class="range-inputAngle">
+      
+            <input type="range" id="angle"  min="0" max="72" value="0" step="0.03">
+            <div class="valueAngle">
+              <div ></div>
+            </div>
+          </div>
+        </div>
+        <div>
+       
+      </div>
+    </div>
+
+    </div>
+
+
+
+
+  </body>
+</html>

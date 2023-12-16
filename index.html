@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <script src="https://unpkg.com/react@16.13.1/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom-server.browser.production.min.js"></script>
@@ -75,9 +76,11 @@
   
     </style>
 
-    <title>Vite App</title>
-    <script type="module" crossorigin src="/assets/index-OHy3y7q6.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-xUXHOIQB.css">
+    <title>TattMaker</title>
+    <script type="module" crossorigin src="/assets/main-GkZGE0Bw.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/index-xmR1dvwd.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-IUXBdWI9.css">
+    <link rel="stylesheet" crossorigin href="/assets/main-nM2PJ29q.css">
   </head>
   <body>
     
@@ -86,10 +89,25 @@
 
       <canvas id="renderCanvas"></canvas>
       <div class="sidebar">
+        <h2 style="color: white;">Switch Models:</h2>
+        <div class="modelsthumb">
+          <div class="malethumb">
+            <button class="maleModelBtn" >
+              <img src="/assets/maleThumb-removebg-preview-R_3c5llV.png" width="350px" alt="" srcset="">
+            </button>
+          </div>
+          <div class="femalethumb">
+          <a href="/female/index.html">
+          <button class="femaleModelBtn">
+            <img src="/assets/femaleThumb-removebg-preview-OJaKsNj2.png" width="350px" alt="" srcset="">
+          </button>
+        </a>
+        </div>
+        </div>
         <button class="switchModel"><a href="/female/index.html">Female Model</a></button>
         <button class="startAnimationBtn">Run Animation</button>
         <button class="stopAnimationBtn">Stop Animation</button>
-        <img src="" width="350px" alt="" srcset="">
+        <img src="/" width="350px" alt="" srcset="">
         <input type="file" id="images" accept="image/*" required>
       
       
@@ -119,7 +137,7 @@
       </div>
     </div>
 
-      </div>
+    </div>
 
 
 
