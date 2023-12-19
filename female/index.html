@@ -76,10 +76,10 @@
     </style>
 
     <title>TattMaker</title>
-    <script type="module" crossorigin src="/assets/nested-wFFiPrhL.js"></script>
+    <script type="module" crossorigin src="/assets/nested-9FIgvPBW.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/babylon.inspector.bundle.max-VR0oASMa.js">
     <link rel="stylesheet" crossorigin href="/assets/babylon.inspector.bundle-IUXBdWI9.css">
-    <link rel="stylesheet" crossorigin href="/assets/nested-IlKHJkFr.css">
+    <link rel="stylesheet" crossorigin href="/assets/main-WQnK5c4k.css">
   </head>
   <body>
     
@@ -91,46 +91,48 @@
         <h2 style="color: white;">Switch Models:</h2>
         <div class="modelsthumb">
           <div class="malethumb">
-            <a href="/">
-              <button class="maleModelBtn" >
-                <img src="/assets/maleThumb-removebg-preview-R_3c5llV.png" width="350px" alt="" srcset="">
-              </button>
-            </a>
+            <button class="maleModelBtn" >
+              <img src="/assets/maleThumb-removebg-preview-R_3c5llV.png" width="350px" alt="" srcset="">
+            </button>
           </div>
           <div class="femalethumb">
+          <a href="/female/index.html">
           <button class="femaleModelBtn">
             <img src="/assets/femaleThumb-removebg-preview-OJaKsNj2.png" width="350px" alt="" srcset="">
           </button>
+        </a>
         </div>
         </div>
-        <button class="startAnimationBtn">Run Animation</button>
+      <div class="animationCtrl">
+        <button class="startAnimationBtn">Begin Animation</button>
         <button class="stopAnimationBtn">Stop Animation</button>
+      </div>
         <img src="/" width="350px" alt="" srcset="">
-        <input type="file" id="images" accept="image/*" required>
+        <input type="file" id="images" accept="image/*" required />
       
-      
-      </input>
-   
-        <div>
-          <p>Scale</p>
-          <div class="range-input">
-          <input type="range" id="width"  min="0" max="1" value="0.03" step="0.015">
-          <div class="value">
-            <div></div>
-          </div>
-        </div>
-        </div>
-        <div>
-          <p>Angle</p>
-          <div class="range-inputAngle">
-      
-            <input type="range" id="angle"  min="0" max="72" value="0" step="0.03">
-            <div class="valueAngle">
-              <div ></div>
+        <div class="transformationCtrl">
+          <div>
+            <p>Scale</p>
+            <div class="range-input">
+            <input type="range" id="width"  min="0" max="1" value="0.03" step="0.015">
+            <div class="value">
+              <div></div>
             </div>
           </div>
+          </div>
+          <div>
+            <p>Angle</p>
+            <div class="range-inputAngle">
+        
+              <input type="range" id="angle"  min="0" max="72" value="0" step="0.03">
+              <div class="valueAngle">
+                <div ></div>
+              </div>
+            </div>
+          </div>
+          <div>
         </div>
-        <div>
+     
        
       </div>
     </div>
