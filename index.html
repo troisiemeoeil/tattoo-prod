@@ -79,14 +79,18 @@
       font-size: 1.5em;
       color: white;
     }
-  
+    @media screen and (max-width: 1500px) {
+      i {
+        font-size: 15px;
+      }
+    }
     </style>
 
     <title>TattMaker</title>
-    <script type="module" crossorigin src="/assets/main-XamCqeX-.js"></script>
+    <script type="module" crossorigin src="/assets/main-RkJtwtnc.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/ExtrasAsMetadata-aASh9PhV.js">
     <link rel="stylesheet" crossorigin href="/assets/ExtrasAsMetadata-kC-fe6P6.css">
-    <link rel="stylesheet" crossorigin href="/assets/main-jPJh5gN1.css">
+    <link rel="stylesheet" crossorigin href="/assets/main-NqQ0af9k.css">
   </head>
   <body>
     
@@ -116,13 +120,15 @@
         </a>
         </div>
         </div>
-        <div>
+        <div class="animationWrapper">
           <h2 style="color: white;">ANIMATION:</h2>
           <div class="animationCtrl">
-            <button class="startAnimationBtn">Start Walking 
+            <button class="startAnimationBtn">
+           
                 <i class="fa-solid fa-person-walking"></i>
             </button>
-            <button class="stopAnimationBtn">Stop Walking
+            <button class="stopAnimationBtn">
+          
               <i class="fa-regular fa-circle-stop"></i>
             </button>
           </div>
@@ -133,7 +139,7 @@
         <div class="inputFiles">
             <div class="inputContent">
               <i class="fa-solid fa-wand-magic-sparkles" style="color: white;"></i>
-              <h4 style="color: white;">UPLOAD DESIGN</h4>
+              <div class="secondaryHeader" style="color: white;">UPLOAD DESIGN</div>
 
             </div>
           <input type="file" id="images" accept="image/*" required />
